@@ -1,0 +1,138 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+
+ext {
+
+    //android
+    androidBuildToolsVersion = "25.0.2"
+    androidMinSdkVersion = 14
+    androidTargetSdkVersion = 21
+    androidCompileSdkVersion = 23
+    androidSupportVersion = "25.0.1"
+    androidSupport4Version = "${androidSupportVersion}"
+    androidSupport7Version = "${androidSupportVersion}"
+    androidSupportDesignVersion = "${androidSupportVersion}"
+    androidSupportCardViewVersion = "${androidSupportVersion}"
+    androidSupportRecyclerViewVersion = "${androidSupportVersion}"
+    androidSupportAnnotationVersion = "${androidSupportVersion}"
+    andoridSupportEspressoVersion = "2.2.2"
+    androidSupportTestRunnerVersion = "0.5"
+    androidSupportTestRulesVersion = "0.5"
+
+    //Testing
+    robolectricVersion = '3.0'
+    jUnitVersion = '4.12'
+    assertJVersion = '1.7.1'
+    mockitoVersion = '2.2.12'
+    dexmakerVersion = '1.0'
+    espressoVersion = '2.0'
+    testingSupportLibVersion = '0.1'
+    hamcrestVersion = '1.3'
+
+    //Libraries
+    daggerVersion = '2.0'
+    butterKnifeVersion = '6.1.0'
+    rxJavaVersion = '1.0.10'
+    rxAndroidVersion = '1.1.0'
+    rxBinding = '0.4.0'
+    javaxAnnotationVersion = '1.0'
+    gsonVersion = '2.7'
+    okHttpVersion = '3.4.1'
+    retrofitVersion = '1.9.0'
+    androidAnnotationsVersion = '23.2.1'
+    okHttpUtilVersion = '1.0.2'
+    retrofitOkHttpClientVersion = '1.0.2'
+    timberVersion = '3.1.0'
+    crashlyticsVersion = '2.6.7@aar'
+    //内存泄露检测工具
+    leakcanaryVersion = '1.4-beta2'
+    leakcanaryNoOpVersion = '1.5.4'
+    materialIntroVersion = '1.0.6'
+    supportMultidexVersion = '1.0.1'
+    //列表动画
+    recyclerviewAnimatorVersion = '2.2.3'
+    materialNumberPickerVersion = '1.2.0'
+    frescoVersion = '0.12.0'
+    imagePipelineOkHttpVersion = '0.12.0'
+    qiniuVersion = '7.0.7'
+    umengVersion = 'latest.integration'
+    wheelPickerVersion = '1.1.2'
+    mavenAntTaskVersion = '2.1.3'
+    rey5137MaterialVersion = "1.1.1"
+    qfEssentialVersion = "1.0.28"
+    walleVersion = "1.1.0"
+
+
+
+
+    appDependencies = [
+            daggerCompiler      : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger              : "com.google.dagger:dagger:${daggerVersion}",
+            butterKnife         : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            rxJava              : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid           : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            rxBinding           : "com.jakewharton.rxbinding:rxbinding:${rxBinding}",
+            javaxAnnotation     : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            leakcanary          : "com.squareup.leakcanary:leakcanary-android:${leakcanaryVersion}",
+            leakcanaryNoOp      : "com.squareup.leakcanary:leakcanary-android-no-op:${leakcanaryNoOpVersion}",
+            materialIntro       : "com.yamlee:materialintro:${materialIntroVersion}",
+            supportMultidex     : "com.android.support:multidex:${supportMultidexVersion}",
+            recyclerViewAnimator: "jp.wasabeef:recyclerview-animators:${recyclerviewAnimatorVersion}",
+            timber              : "com.jakewharton.timber:timber:${timberVersion}",
+            materialNumberPicker: "biz.kasual:materialnumberpicker:${materialNumberPickerVersion}",
+            fresco              : "com.facebook.fresco:fresco:${frescoVersion}",
+            imagePipelineOkHttp : "com.facebook.fresco:imagepipeline-okhttp3:${imagePipelineOkHttpVersion}",
+            qiniu               : "com.qiniu:qiniu-android-sdk:${qiniuVersion}",
+            umeng               : "com.umeng.analytics:analytics:${umengVersion}",
+            wheelPicker         : "cn.aigestudio.wheelpicker:WheelPicker:${wheelPickerVersion}",
+            crashlytics         : "com.crashlytics.sdk.android:crashlytics:${crashlyticsVersion}",
+            support4            : "com.android.support:support-v4:${androidSupport4Version}",
+            qfEssential         : "com.qfpay:near-essential:${qfEssentialVersion}",
+            walle               : "com.meituan.android.walle:library:${walleVersion}"
+    ]
+
+    appTestDependencies = [
+            junit            : "junit:junit:${jUnitVersion}",
+            mockito          : "org.mockito:mockito-core:${mockitoVersion}",
+            dexmaker         : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+            dexmakerMockito  : "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+            espresso         : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+            testingSupportLib: "com.android.support.test:testing-support-lib:${testingSupportLibVersion}",
+            robolectric      : "org.robolectric:robolectric:${robolectricVersion}",
+            hamcrest         : "org.hamcrest:hamcrest-all:${hamcrestVersion}",
+            mavenAntTask     : "org.apache.maven:maven-ant-tasks:${mavenAntTaskVersion}",
+            supportTestRunner: "com.android.support.test:runner:${androidSupportTestRunnerVersion}",
+            supportTestRules : "com.android.support.test:rules:${androidSupportTestRulesVersion}",
+            supportEspresso  : "com.android.support.test.espresso:espresso-core:${andoridSupportEspressoVersion}",
+            supportAnnotation: "com.android.support:support-annotations:library:${androidSupportAnnotationVersion}",
+    ]
+
+
+    essentialDependencies = [
+            support7            : "com.android.support:appcompat-v7:${androidSupport7Version}",
+            supportDesign       : "com.android.support:design:${androidSupportDesignVersion}",
+            supportCardView     : "com.android.support:cardview-v7:${androidSupportCardViewVersion}",
+            supportRecyclerView : "com.android.support:appcompat-v7:${androidSupport7Version}",
+            rey5137Material     : "com.github.rey5137:material:${rey5137MaterialVersion}",
+            daggerCompiler      : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger              : "com.google.dagger:dagger:${daggerVersion}",
+            okhttp              : "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            log                 : "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+            okhttp_ws           : "com.squareup.okhttp3:okhttp-ws:${okHttpVersion}",
+            gson                : "com.google.code.gson:gson:${gsonVersion}",
+            rxJava              : "io.reactivex:rxjava:${rxJavaVersion}",
+            rxAndroid           : "io.reactivex:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation     : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            androidAnnotations  : "com.android.support:support-annotations:${androidAnnotationsVersion}",
+            retrofit            : "com.squareup.retrofit:retrofit:${retrofitVersion}",
+            okHttpUtil          : "com.qfpay:okhttputils:${okHttpUtilVersion}",
+            retrofitOkHttpClient: "com.jakewharton.retrofit:retrofit1-okhttp3-client:${retrofitOkHttpClientVersion}",
+            timber              : "com.jakewharton.timber:timber:${timberVersion}",
+            fresco              : "com.facebook.fresco:fresco:${frescoVersion}",
+            crashlytics         : "com.crashlytics.sdk.android:crashlytics:${crashlyticsVersion}"
+    ]
+}
